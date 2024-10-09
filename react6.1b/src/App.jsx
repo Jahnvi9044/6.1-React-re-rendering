@@ -13,6 +13,11 @@ function App() {
   return (<div>
     
    <CardWrapper style={{border:"2px solid black"}} innerComponenet ={<TextArea/>} ></CardWrapper>
+   <CardWrapper style={{border:"2px solid black"}} innerComponenet ="Hello" ></CardWrapper>
+   <CardWrapper style={{border:"2px solid black"}} innerComponenet = {<div>
+      Hello I am in div
+   </div>} ></CardWrapper>
+
  
 
     </div>
@@ -26,7 +31,7 @@ const [val,setVal] = useState("Hi there");
   function reset(){
 
     const input = prompt("Enter Whatever you wnat :");
-    //
+    // this is done so that the input 
     if(input)
       setVal(input)
   }
@@ -41,6 +46,8 @@ const [val,setVal] = useState("Hi there");
 
 }
 
+
+//Card Wrapper Treats everthing inside inner
 function CardWrapper({style,innerComponenet}){
   return <div style = {style}>
     {innerComponenet}
